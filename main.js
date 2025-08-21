@@ -30,3 +30,11 @@ function addHistory(text) {
 
   localStorage.setItem('history', historyEl.innerHTML);
 }
+
+function clean() {
+  balance = 0;
+  balanceEl.textContent = balance;
+  historyEl.innerHTML = "";
+  localStorage.setItem('balance', balance);
+  localStorage.removeItem('history');
+}
