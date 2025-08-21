@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #f3f4f6
+  background: #f3f4f6;
 }
 
 .card {
@@ -13,72 +13,22 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
-  width: 320px}
+  width: 320px;
+}
 
 h2 {
   margin: 0;
   font-size: 24px;
-  color: #333;}
+  color: #333;
+}
 
 .balance {
   font-size: 30px;
   font-weight: bold;
-  margin: 20px 0}
+  margin: 20px 0;
+}
 
 input {
-width: 80%;
-padding: 10px;
-border: 1px solid #ccc;
-border-radius: 10px;
-font-size: 16px;
-margin-bottom: 15px;
-text-align: center
-}
-
-.btns {
-  display: flex;
-  justify-content: center;
-  gap: 15px
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: 0.2s;}
-
-.plus {
-background: #4CAF50;
-color: white;}
-
-.minus {
-background: #E53935;
- color: white;}
-
-.tozalash{
-background:blue;
-color:white;}
-
-button:hover {
- opacity: 0.8;}
-
-.history {
-margin-top: 20px;
-text-align: left;
- max-height: 120px;
-  overflow-y: auto;
-  font-size: 14px;}
-
-.in {
-  color: green;}
-
-.out {
-  color: red;}
-
-
-  input {
   width: 80%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -88,8 +38,60 @@ text-align: left;
   text-align: center;
   -moz-appearance: textfield;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.plus {
+  background: #4CAF50;
+  color: white;
+}
+
+.minus {
+  background: #E53935;
+  color: white;
+}
+
+.tozalash {
+  background: blue;
+  color: white;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.history {
+  margin-top: 20px;
+  text-align: left;
+  max-height: 120px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.in {
+  color: green;
+}
+
+.out {
+  color: red;
 }
