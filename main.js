@@ -13,7 +13,7 @@ if (localStorage.getItem('history')) {
 function changeBalance(type) {
   let amount = parseInt(amountInput.value);
   if (isNaN(amount) || amount <= 0) {
-    alert("Iltimos to‘g‘ri summa kiriting");
+    alert("Iltimos, to‘g‘ri summa kiriting!");
     return;
   }
 
@@ -44,4 +44,3 @@ function clean() {
   localStorage.setItem('balance', balance);
   localStorage.removeItem('history');
 }
-
