@@ -1,27 +1,28 @@
 let balance = parseInt(localStorage.getItem('balance')) || 0;
-const balanceEl = document.getElementById('balance')
-const historyEl = document.getElementById('history')
-const amountInput = document.getElementById('amount')
+const balanceEl = document.getElementById('balance');
+const historyEl = document.getElementById('history');
+const amountInput = document.getElementById('amount');
 
 balanceEl.textContent = balance;
 
+// Tarixni yuklash
 if (localStorage.getItem('history')) {
-  historyEl.innerHTML = localStorage.getItem('history')
+  historyEl.innerHTML = localStorage.getItem('history');
 }
 
 function changeBalance(type) {
-  let amount = parseInt(amountInput.value)
+  let amount = parseInt(amountInput.value);
   if (isNaN(amount) || amount <= 0) {
-    alert("Iltimos to‘g‘ri summa kiriting")
-    return
+    alert("Iltimos to‘g‘ri summa kiriting");
+    return;
   }
 
   if (type === 'plus') {
     balance += amount;
-    addHistory(`➕ <span class="in">+${amount}</span>`)
+    addHistory(`➕ <span class="in">+${amount}</span>`);
   } else {
     balance -= amount;
-    addHistory(`➖ <span class="out">-${amount}</span>`)
+    addHistory(`➖ <span class="out">-${amount}</span>`);
   }
 
   balanceEl.textContent = balance;
@@ -43,3 +44,4 @@ function clean() {
   localStorage.setItem('balance', balance);
   localStorage.removeItem('history');
 }
+
