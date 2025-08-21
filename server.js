@@ -7,7 +7,7 @@ app.use(express.static('.')); // index.html, style.css, main.js shu papkada
 
 const FILE = 'file.txt';
 
-// Balansni olish
+
 app.get('/balance', (req, res) => {
   fs.readFile(FILE, 'utf8', (err, data) => {
     if (err || !data) {
@@ -20,7 +20,6 @@ app.get('/balance', (req, res) => {
   });
 });
 
-// Balansni yangilash
 app.post('/balance', (req, res) => {
   const { balance, history } = req.body;
   const text = `balance=${balance}\nhistory=${history.join('|')}`;
