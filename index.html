@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Balans </title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Balans Tracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
-    <h2>Balans</h2>
-  <div class="balance" id="balance">0</div>
-    <input type="number" id="amount" placeholder="Summani kiriting">
-     <div class="btns">
-      <button class="plus" onclick="changeBalance('plus')">Qoshish</button>
-      <button class="minus" onclick="changeBalance('minus')">Ayirish</button>
-       <button class="tozalash" onclick="clean()">Tozalash</button>
-     </div>
-    <div class="history" id="history"></div>
-  </div>
+  <h1>Balans: <span id="balance">0</span></h1>
 
-  
+  <input id="amount" type="number" placeholder="Summani kiriting">
+  <button onclick="changeBalance('plus')">➕ Qo‘shish</button>
+  <button onclick="changeBalance('minus')">➖ Ayirish</button>
+  <button onclick="clean()"> Tozalash</button>
+
+  <h2>Tarix</h2>
+  <div id="history"></div>
 
   <script src="main.js"></script>
-
 </body>
 </html>
