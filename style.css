@@ -47,8 +47,8 @@ input::-webkit-inner-spin-button {
 
 .btns {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 10px; 
 }
 
 button {
