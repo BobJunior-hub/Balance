@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balans </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h2>Balans</h2>
+  <div class="balance" id="balance">0</div>
+    <input type="number" id="amount" placeholder="Summani kiriting">
+     <div class="btns">
+      <button class="plus" onclick="changeBalance('plus')">Qoshish</button>
+      <button class="minus" onclick="changeBalance('minus')">Ayirish</button>
+     </div>
+    <div class="history" id="history"></div>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
