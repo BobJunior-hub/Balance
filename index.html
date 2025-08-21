@@ -6,16 +6,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Balans: <span id="balance">0</span></h1>
+  <div class="card">
+    <h2>Balans</h2>
+    <div class="balance" id="balance">0</div>
 
-  <input id="amount" type="number" placeholder="Summani kiriting">
-  <button onclick="changeBalance('plus')">➕ Qo‘shish</button>
-  <button onclick="changeBalance('minus')">➖ Ayirish</button>
-  <button onclick="clean()"> Tozalash</button>
+    <input id="amount" type="number" placeholder="Summani kiriting">
 
-  <h2>Tarix</h2>
-  <div id="history"></div>
+    <div class="btns">
+      <button class="plus" onclick="changeBalance('plus')">➕ Qo‘shish</button>
+      <button class="minus" onclick="changeBalance('minus')">➖ Ayirish</button>
+    </div>
+    <br>
+    <button class="tozalash" onclick="clean()"> Tozalash</button>
+
+    <div class="history" id="history"></div>
+  </div>
 
   <script src="main.js"></script>
 </body>
 </html>
+
