@@ -1,26 +1,32 @@
-let balance = 0;
-const balanceEl = document.getElementById('balance');
-const historyEl = document.getElementById('history');
-const amountInput = document.getElementById('amount');
+let balance = parseInt(localStorage.getItem('balance')) || 0;
+const balanceEl = document.getElementById('balance')
+const historyEl = document.getElementById('history')
+const amountInput = document.getElementById('amount')
+balanceEl.textContent = balance;
 
+if (localStorage.getItem('history')) {
+  historyEl.innerHTML = localStorage.getItem('history')}
 function changeBalance(type) {
   let amount = parseInt(amountInput.value)
   if (isNaN(amount) || amount <= 0) {
-    alert("Iltimos togri suma kiriting")
-  return;
-  }
-
+    alert("Iltimos togri summa kiriting")
+  return }
   if (type === 'plus') {
-    balance += amount;addHistory(`➕ <span class="in">+${amount}</span>`)
+    balance += amount;
+    addHistory(`➕ <span class="in">+${amount}</span>`)
   } else {
-    balance -= amount;addHistory(`➖ <span class="out">-${amount}</span>`)
+    balance -= amount
+    addHistory(`➖ <span class="out">-${amount}</span>`)
   }
-
   balanceEl.textContent = balance;
+  localStorage.setItem('balance', balance);
   amountInput.value = "";
 }
 
 function addHistory(text) {
-  const div = document.createElement('div')
+  const div = document.createElement('div');
   div.innerHTML = text;
-  historyEl.prepend(div)}
+  historyEl.prepend(div);
+
+  localStorage.setItem('history', historyEl.innerHTML);
+}
