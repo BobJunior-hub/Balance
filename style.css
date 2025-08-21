@@ -60,6 +60,12 @@ button {
   transition: 0.2s;
 }
 
+.btns button {
+  flex: 1;          
+  height: 45px;      
+}
+
+
 .plus {
   background: #4CAF50;
   color: white;
